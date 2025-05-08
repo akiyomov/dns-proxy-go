@@ -1,0 +1,8 @@
+ads.example.com
+trackers.example.com
+googleads.g.doubleclick.net
+pagead2.googlesyndication.com
+pagead.l.doubleclick.net
+adservice.google.com
+adservice.google.co.kr
+ad.doubleclick.net
