@@ -71,7 +71,7 @@ func (p *DNSProxy) HandleDNSRequest(w dns.ResponseWriter, r *dns.Msg) {
 					A: net.ParseIP("0.0.0.0"),
 				},
 			}
-			log.Printf("[BLOCKED] %s routed to 0.0.0.0", domain)
+			log.Printf("❌ [BLOCKED] %s routed to 0.0.0.0", domain)
 		} else {
 			// Record allowed query
 			if p.stats != nil {
