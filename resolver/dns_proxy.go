@@ -2,6 +2,7 @@ package resolver
 
 import (
 	"log"
+	"net"
 	"os"
 	"strings"
 
@@ -58,9 +59,19 @@ func (p *DNSProxy) HandleDNSRequest(w dns.ResponseWriter, r *dns.Msg) {
 				p.stats.RecordQuery(domain, true)
 			}
 			
-			// Blocked response - return NXDOMAIN
-			msg.SetRcode(r, dns.RcodeNameError)
-			log.Printf("[BLOCKED] %s", domain)
+			// Blocked response - route to 0.0.0.0
+			msg.Answer = []dns.RR{
+				&dns.A{
+					Hdr: dns.RR_Header{
+						Name:   q.Name,
+						Rrtype: dns.TypeA,
+						Class:  dns.ClassINET,
+						Ttl:    0,
+					},
+					A: net.ParseIP("0.0.0.0"),
+				},
+			}
+			log.Printf("[BLOCKED] %s routed to 0.0.0.0", domain)
 		} else {
 			// Record allowed query
 			if p.stats != nil {

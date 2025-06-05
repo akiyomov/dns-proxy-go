@@ -3697,7 +3697,13 @@ ae13.pr01.lhr2.tfbnw.net
 ae13.pr01.mia1.tfbnw.net
 ae13.pr01.ord1.tfbnw.net
 ae13.pr01.sea1.tfbnw.net
+googleads.g.doubleclick.net
 af-za.facebook.com
+beacons2.gvt2.com
+beacons3.gvt2.com
+ib.adnxs.com
+sin3-ib.adnxs.com
+securepubads.g.doubleclick.net
 ak.facebook.com
 akamaiprobe-bgp-01-mia1.facebook.com
 alpha-shv-03-ash5.facebook.com
@@ -3705,6 +3711,7 @@ alpha-shv-03-atn1.facebook.com
 alpha-shv-03-lla1.facebook.com
 alpha-shv-04-prn2.facebook.com
 alpha-shv-09-frc1.facebook.com
+crcdn01.adnxs-simple.com
 alpha.facebook.com
 alpha.mirror.facebook.net
 alpha.vvv.facebook.com
